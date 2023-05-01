@@ -309,14 +309,14 @@ var sum2 = addFourAges.apply(null, ages)
 // console.log(sum2);
 
 //ES6
-const sum3 = addFourAges(...ages)
+// const sum3 = addFourAges(...ages)
 // console.log(sum3);
 // console.log(...ages);
 
 
-const familySmith = ['John', 'Jane', 'Mark']
-const familyMiller = ['Mary', 'Bob', 'Ann']
-const bigFamily = [...familySmith, 'Lily', ...familyMiller]
+// const familySmith = ['John', 'Jane', 'Mark']
+// const familyMiller = ['Mary', 'Bob', 'Ann']
+// const bigFamily = [...familySmith, 'Lily', ...familyMiller]
 // console.log(bigFamily);
 
 
@@ -401,3 +401,26 @@ function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = '
 
 var john = new SmithPerson('John', 1990)
 var emily = new SmithPerson('Emily', 1998, 'Diaz', 'Spanish')
+
+////////////////////////////////////////////
+// Lecture: Maps
+
+const question = new Map();
+question.set('question' ,'What is the official name of yhe latest major JavaScript Version?')
+question.set(1 ,'ES5')
+question.set(2 ,'ES6')
+question.set(3 ,'ES2015')
+question.set(4 ,'ES7')
+question.set('correct' , 3)
+question.set(true ,'Correct Answer :D')
+question.set(false ,'Wrong, Please try again!')
+
+console.log(question.get('question'));
+console.log(question.size);
+
+question.delete(4)
+
+
+
+
+
