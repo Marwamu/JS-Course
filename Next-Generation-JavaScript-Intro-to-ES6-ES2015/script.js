@@ -406,7 +406,7 @@ var emily = new SmithPerson('Emily', 1998, 'Diaz', 'Spanish')
 // Lecture: Maps
 
 const question = new Map();
-question.set('question' ,'What is the official name of yhe latest major JavaScript Version?')
+question.set('question' ,'What is the official name of the latest major JavaScript Version?')
 question.set(1 ,'ES5')
 question.set(2 ,'ES6')
 question.set(3 ,'ES2015')
@@ -416,9 +416,26 @@ question.set(true ,'Correct Answer :D')
 question.set(false ,'Wrong, Please try again!')
 
 console.log(question.get('question'));
-console.log(question.size);
+// console.log(question.size);
 
-question.delete(4)
+if (question.has(4)){
+
+    question.delete(4)
+}
+
+// question.forEach((value, key) => console.log(`this is ${key}, and its set to ${value}`))
+
+for(let [key, value] of question.entries()){
+    if(typeof(key) === 'number')
+    {
+        console.log(`Answer ${key}: ${value}`);
+    }
+}
+
+const ans = parseInt(prompt('Write the correct answer'))
+console.log(question.get(ans === question.get('correct')));
+
+
 
 
 
